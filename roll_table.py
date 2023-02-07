@@ -9,4 +9,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    print(args.file_list)
+    for file in args.file_list:
+        df = csv_reader.read_csv(file)
+        result = simple_table_service.roll_on_table(df)
+        print(file.replace(".csv", "") + " result: " + result)
