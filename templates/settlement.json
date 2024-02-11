@@ -1,10 +1,104 @@
 {
   "Rolls" : {
 
-    "Population_Dice" :  "([1d30]+20) * 100"
+    "ThropPopulation" :  "[1d30]+5",
+    "HamletPopulation" :  "[1d30]+30",
+    "VillagePopulation" :  "([1d30]+5) * 5",
+    "SmallTownPopulation" :  "([1d30]+2) * 60",
+    "LargeTownPopulation" :  "([1d30]+20) * 100",
+    "SmallCityPopulation" :  "([1d30]*200) + 5000",
+    "LargeCityPopulation" :  "([1d30]*400) + 10000"
 
 },
   "Parameters": {
+
+    "PlaceNamePreffix" : [
+
+      "Aber",
+      "Amber",
+      "Anker",
+      "Agrin",
+      "Agger",
+      "Ander",
+      "Bel",
+      "Belfry",
+      "Balfor",
+      "Bargrin",
+      "Birk",
+      "Barg",
+      "Basker",
+      "Carcon",
+      "Cam",
+      "Chester",
+      "Cham",
+      "Der",
+      "Daron",
+      "Derien",
+      "Dum",
+      "Daggor",
+      "Dagan",
+      "Est",
+      "Ester",
+      "Exen",
+      "Far",
+      "Frin",
+      "Frisk",
+      "Gom",
+      "Ghar",
+      "Garon"
+    ],
+
+    "PlaceNameSuffix" : [
+
+      "shire",
+      "ton",
+      "ford",
+      "fiord",
+      "wood",
+      "field",
+      "vale",
+      "dale",
+      "holm",
+      "holme",
+      "homm",
+      "burg",
+      "bur",
+      "wick",
+      "vikk",
+      "sted",
+      "stead",
+      "crest",
+      "haven",
+      "gate",
+      "bury",
+      "port",
+      "brook",
+      "mere",
+      "thorp",
+      "creek",
+      "glen",
+      "mere",
+      "mer",
+      "moor",
+      "haven",
+      "mar",
+      "mark",
+      "on",
+      "hein",
+      "linn",
+      "lin"
+    ],
+
+    "Population" : [
+      "a small Thorp with a population of {ThropPopulation}",
+      "a hamlet with a population of {HamletPopulation}",
+      "a village with a population of {VillagePopulation}",
+      "a small Town with a population of {SmallTownPopulation}",
+      "a large Town with a population of {LargeTownPopulation}",
+      "a small city with a population of {SmallCityPopulation}",
+      "a large city with a population of {LargeCityPopulation}"
+    ],
+
     "Government" : [
       "anarchy",    
       "argentocracy",
@@ -57,7 +151,7 @@
       "indifferent to",
       "infuriated by",
       "irritated by",
-      "melancholy about",
+      "melancholic about",
       "peaceful around",
       "pissed off with",
       "predatory of",
@@ -86,38 +180,42 @@
       "exorbitant"
     ],
     "Issues" : [
-      "beggars/vagrancy",
+      "vagrancy",
       "drunkards",
       "corruption",
-      "disease",
-      "feuding",
+      "magical disease",
+      "plague",
+      "clan feuding",
       "fire",
+      "smuggling",
+      "succession crisis",
       "prostitution",
       "theft",
-      "unrest",
+      "political unrest",
+      "rebellion",
       "waste issues"
     ],
     "IssueDegree" : [
       "minor",
       "moderate",
-      "major"
+      "widespread"
     ],
     "ExternalThreat" : [
-      "bandits (thieves)",
-      "barbarians (horde)",
-      "beetles, giant",
+      "bandits",
+      "barbarians",
+      "giant beetles",
       "bugbears",
       "a chimera",
-      "clerics (evil)",
+      "chaotic clerics",
       "a dragon",
-      "elves (evil)",
+      "elves",
       "an ettin",
       "gargoyles",
       "ghouls*",
-      "giant(s)",
+      "a giant",
       "gnolls",
       "goblins",
-      "harpie(s)",
+      "harpies",
       "hobgoblins",
       "kobolds",
       "lizard men",
@@ -135,5 +233,5 @@
       "zombies"
     ]
   },
-  "StringFormat": "This settlement has a population of {Population_Dice} people, the government type is {Government}. The population is {ReactionToOutsiders} outsiders. The economy is {Economy} and the prices are {Prices}. The settlement has a {IssueDegree} problem with {Issues} and is threatned by {ExternalThreat}"
+  "StringFormat": "{PlaceNamePreffix}{PlaceNameSuffix}, {Population}. It is governed by a {Government}. The population is {ReactionToOutsiders} outsiders. {PlaceNamePreffix}{PlaceNameSuffix}'s economy is {Economy} and the prices are {Prices}. The settlement has a {IssueDegree} problem with {Issues} and is threatned by {ExternalThreat}."
 }

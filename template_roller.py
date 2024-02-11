@@ -14,7 +14,7 @@ def roll_template_json(path):
     
     param_dict.update(variable_dict)
     
-    return format_string(template_json_dict[STRING_FORMAT_PARAM_NAME], param_dict)
+    return format_string(template_json_dict[STRING_FORMAT_PARAM_NAME], param_dict).format_map(param_dict)
 
 def roll_parameters(data):
     parameters_dict:dict = data[PARAM_NAME].items()
@@ -38,5 +38,3 @@ def roll_on_table(table):
 
 def format_string(string_format:str, parameter_dict):
     return string_format.format_map(parameter_dict)
-
-print(roll_template_json("templates/settlement.json"))
