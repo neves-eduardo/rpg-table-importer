@@ -1,4 +1,9 @@
 {
+  "Rolls" : {
+
+    "Population_Dice" :  "([1d30]+20) * 100"
+
+},
   "Parameters": {
     "Government" : [
       "anarchy",    
@@ -130,5 +135,5 @@
       "zombies"
     ]
   },
-  "StringFormat": "This settlement government is {Government}. It is {ReactionToOutsiders} outsiders. The economy is {Economy} and the prices are {Prices}. The settlement has a {IssueDegree} problem with {Issues} and is threatned by {ExternalThreat}"
+  "StringFormat": "This settlement has a population of {Population_Dice} people, the government type is {Government}. The population is {ReactionToOutsiders} outsiders. The economy is {Economy} and the prices are {Prices}. The settlement has a {IssueDegree} problem with {Issues} and is threatned by {ExternalThreat}"
 }
