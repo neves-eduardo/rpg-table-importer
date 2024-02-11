@@ -1,0 +1,49 @@
+{
+  "Parameters": {
+    "RuinType" : [
+      "A hovel",
+      "A villa",
+      "A tower",
+      "An altar",
+      "A tomb",
+      "A crypt",
+      "A bunker",
+      "A hamlet",
+      "A small castle",
+      "A small city"
+    ],
+    "RuinDecayDegree" : [
+      "value",
+      "slightly/barely",
+      "moderately/noticeably",
+      "severely/extremely"
+    ],
+    "RuinCharacter" : [
+      "value",
+      "burned/charred",
+      "collapsed/crumbling",
+      "covered in vines/sand/rocks*",
+      "disfigured/vandalized",
+      "moldy/contaminated**",
+      "sunken",
+      "burned/charred & disfigured/destroyed",
+      "covered in vines/sand/rocks & moldy/contaminated",
+      "sunken & covered in vines/sand/rocks",
+      "sunken & collapsed/crumbling & covered"
+    ],
+    "RuinInhabitants" : [
+      "value",
+      "chimeras",
+      "humanoids",
+      "humans",
+      "insects",
+      "lycanthropes",
+      "magical creatures",
+      "mammals",
+      "molds/slimes/jellies",
+      "reptiles/reptilians",
+      "undead"
+    ]
+  },
+  "StringFormat": "{RuinType}, {RuinDecayDegree} {RuinCharacter} and inhabitated by {RuinInhabitants}."
+}
